@@ -1,0 +1,298 @@
+Starting a Gradle Daemon, 3 stopped Daemons could not be reused, use --status for details
+
+> Task :test
+
+ATAStringBuilderCompletionTest > constructor_default_containsNoCharacters() PASSED
+
+ATAStringBuilderCompletionTest > constructor_initialString_containsProvidedString() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:27
+
+ATAStringBuilderCompletionTest > length_emptyBuilder_returnsZero() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:40
+
+ATAStringBuilderCompletionTest > insertChar_indexZero_addsToFront() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:149
+
+ATAStringBuilderCompletionTest > insertChar_offsetTooLarge_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:135
+
+ATAStringBuilderCompletionTest > charAt_indexZero_returnsFirstChar() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:207
+
+ATAStringBuilderCompletionTest > append_emptyStringToNonemptyBuffer_contentsUnchanged() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:102
+
+ATAStringBuilderCompletionTest > insertChar_indexLength_addsToEnd() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:173
+
+ATAStringBuilderCompletionTest > charAt_indexLengthMinus1_returnsLastChar() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:231
+
+ATAStringBuilderCompletionTest > charAt_indexTooSmall_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:182
+
+ATAStringBuilderCompletionTest > append_nonEmptyStringToEmptyBuilder_containsString() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:65
+
+ATAStringBuilderCompletionTest > append_emptyStringToEmptyBuffer_emptyContents() PASSED
+
+ATAStringBuilderCompletionTest > append_nullString_nullAppended() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:115
+
+ATAStringBuilderCompletionTest > insertChar_indexMiddle_addsToMiddle() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:161
+
+ATAStringBuilderCompletionTest > charAt_indexChar_returnsMiddleChar() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:219
+
+ATAStringBuilderCompletionTest > append_nonEmptyStringToNonemptyBuffer_appendsNewString() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:77
+
+ATAStringBuilderCompletionTest > insertChar_offsetTooSmall_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:124
+
+ATAStringBuilderCompletionTest > charAt_indexTooLarge_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:193
+
+ATAStringBuilderCompletionTest > length_nonEmptyBuilder_returnsNumberOfChars() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderCompletionTest.java:52
+
+ATAStringBuilderExtensionTwoTest > substring_startTooSmall_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:103
+
+ATAStringBuilderExtensionTwoTest > insert_offsetTooLarge_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:56
+
+ATAStringBuilderExtensionTwoTest > substring_endTooSmall_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:126
+
+ATAStringBuilderExtensionTwoTest > substring_startLargerThanEnd_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:149
+
+ATAStringBuilderExtensionTwoTest > insert_indexZero_addsToFront() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:70
+
+ATAStringBuilderExtensionTwoTest > append_appendPoint_containsPointsStringValue() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:24
+
+ATAStringBuilderExtensionTwoTest > insert_indexLength_addsToEnd() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:94
+
+ATAStringBuilderExtensionTwoTest > substring_startTooLarge_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:114
+
+ATAStringBuilderExtensionTwoTest > substring_endTooLarge_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:137
+
+ATAStringBuilderExtensionTwoTest > substring_partialSequence_returnsSubstring() FAILED
+    java.lang.StringIndexOutOfBoundsException at ATAStringBuilderExtensionTwoTest.java:176
+
+ATAStringBuilderExtensionTwoTest > append_null_containsNullString() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:36
+
+ATAStringBuilderExtensionTwoTest > substring_entireSequence_returnsEntireString() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:164
+
+ATAStringBuilderExtensionTwoTest > insert_offsetTooSmall_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:45
+
+ATAStringBuilderExtensionTwoTest > insert_indexMiddle_addsToMiddle() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionTwoTest.java:82
+
+ATAStringBuilderExtensionOneTest > setCharAt_indexMiddle_replacesMiddle() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionOneTest.java:55
+
+ATAStringBuilderExtensionOneTest > setCharAt_indexLengthMinus1_replacesEnd() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionOneTest.java:67
+
+ATAStringBuilderExtensionOneTest > deleteCharAt_indexTooSmall_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionOneTest.java:76
+
+ATAStringBuilderExtensionOneTest > setCharAt_indexZero_replacesFront() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionOneTest.java:43
+
+ATAStringBuilderExtensionOneTest > deleteCharAt_indexZero_removesFirstChar() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionOneTest.java:101
+
+ATAStringBuilderExtensionOneTest > setCharAt_indexTooSmall_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionOneTest.java:18
+
+ATAStringBuilderExtensionOneTest > deleteCharAt_indexLengthMinus1_removesLastChar() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionOneTest.java:125
+
+ATAStringBuilderExtensionOneTest > deleteCharAt_indexTooLarge_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionOneTest.java:87
+
+ATAStringBuilderExtensionOneTest > deleteCharAt_indexMiddle_removesMiddleChar() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionOneTest.java:113
+
+ATAStringBuilderExtensionOneTest > setCharAt_indexTooLarge_throwsException() FAILED
+    org.opentest4j.AssertionFailedError at ATAStringBuilderExtensionOneTest.java:29
+
+UserPageVisitGrouperTest > groupUserPageVisits_visitsThatNeedToBeSorted_inputListIsNotModified() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitGrouperTest.java:27
+
+UserPageVisitGrouperTest > groupUserPageVisits_visitsWithSameUserIdsSamePages_preservesAllVisits() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitGrouperTest.java:50
+
+UserPageVisitGrouperTest > groupUserPageVisits_visitsWithDifferentUserIdsDifferentPages_sortedByPages() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitGrouperTest.java:108
+
+UserPageVisitGrouperTest > groupUserPageVisits_visitsWithSameUserIdsDifferentPages_sortedByPages() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitGrouperTest.java:88
+
+UserPageVisitGrouperTest > groupUserPageVisits_visitsWithDifferentUserIds_sortedByUserId() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitGrouperTest.java:68
+
+UserPageVisitAggregateTest > canAggregate_sameUserIdDifferentPage_returnsFalse() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitAggregateTest.java:48
+
+UserPageVisitAggregateTest > aggregate_sameReference_observationsAggregated() PASSED
+
+UserPageVisitAggregateTest > canAggregate_sameReference_returnsTrue() PASSED
+
+UserPageVisitAggregateTest > canAggregate_differentUserIdDifferentPage_returnsFalse() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitAggregateTest.java:76
+
+UserPageVisitAggregateTest > aggregate_differentUserIdSamePage_observationsNotAggregated() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitAggregateTest.java:145
+
+UserPageVisitAggregateTest > aggregate_sameUserIdSamePage_observationsAggregated() PASSED
+
+UserPageVisitAggregateTest > aggregate_differentUserIdDifferentPage_observationsNotAggregated() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitAggregateTest.java:163
+
+UserPageVisitAggregateTest > canAggregate_sameUserIdSamePage_returnsTrue() PASSED
+
+UserPageVisitAggregateTest > canAggregate_differentUserIdSamePage_returnsFalse() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitAggregateTest.java:62
+
+UserPageVisitAggregateTest > aggregate_sameUserIdDifferentPage_observationsNotAggregated() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitAggregateTest.java:127
+
+UserPageVisitAggregatorTest > aggregate_singleVisit_resultHasSingleVisitAggregateObject() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitAggregatorTest.java:38
+
+UserPageVisitAggregatorTest > aggregate_multipleEqualVisits_resultHasSingleVisitAggregateObject() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitAggregatorTest.java:59
+
+UserPageVisitAggregatorTest > aggregate_multipleVisitsWithDifferentUserIds_resultHasMultipleVisitAggregateObjects() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitAggregatorTest.java:80
+
+UserPageVisitAggregatorTest > aggregate_emptyList_resultIsAlsoAnEmptyList() PASSED
+
+UserPageVisitAggregatorTest > aggregate_multipleVisitsnWithSameUserIdsDifferentPages_resultHasMultipleMetricAggregateObjects() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitAggregatorTest.java:104
+
+UserPageVisitTest > compareTo_visitsWithLeftHavingHigherUserId_resultIsPositive() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitTest.java:47
+
+UserPageVisitTest > compareTo_visitsWithSameUserIdsSamePages_resultMatchesResultOfCallingEquals() PASSED
+
+UserPageVisitTest > compareTo_visitsWithLeftHavingLowerUserId_resultIsNegative() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitTest.java:34
+
+UserPageVisitTest > compareTo_visitsWithSameUserIdsLeftHavingLaterPage_resultIsPositive() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitTest.java:73
+
+UserPageVisitTest > compareTo_visitsWithSameUserIdsSamePages_resultIsZero() PASSED
+
+UserPageVisitTest > compareTo_visitsWithSameUserIdsLeftHavingFirstPage_resultIsNegative() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitTest.java:60
+
+UserPageVisitTest > compareTo_visitsWithSameDifferentUserIds_resultMatchesResultOfCallingEquals() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitTest.java:102
+
+UserPageVisitTest > compareTo_visitsWithSameUserIdsDifferentPages_resultMatchesResultOfCallingEquals() FAILED
+    org.opentest4j.AssertionFailedError at UserPageVisitTest.java:117
+
+ItineraryTest > getTotalNumberOfDays_fromEmptyItinerary_numberOfDaysIsZero() FAILED
+    org.opentest4j.AssertionFailedError at ItineraryTest.java:137
+
+ItineraryTest > getNumberOfDestinations_fromEmptyItinerary_numberOfDestinationsIsZero() FAILED
+    org.opentest4j.AssertionFailedError at ItineraryTest.java:18
+
+ItineraryTest > getListOfLocations_fromEmptyItinerary_returnsEmptyList() PASSED
+
+ItineraryTest > addDestination_singleDestination_matchingDestinationAdded() FAILED
+    org.opentest4j.AssertionFailedError at ItineraryTest.java:31
+
+ItineraryTest > removeDestination_fromMultiDestinationItinerary_matchingDestinationNoLongerPresent() FAILED
+    org.opentest4j.AssertionFailedError at ItineraryTest.java:68
+
+ItineraryTest > getTotalNumberOfDays_fromMultiDestinationItinerary_numberOfDaysMatchesSumOfDaysSpentAtEachLocation() FAILED
+    org.opentest4j.AssertionFailedError at ItineraryTest.java:125
+
+ItineraryTest > addDestination_multipleDestinations_allMatchingDestinationsAddedInCorrectOrder() FAILED
+    org.opentest4j.AssertionFailedError at ItineraryTest.java:48
+
+ItineraryTest > removeDestination_fromEmptyItinerary_throwsIndexOutOfBoundsException() FAILED
+    org.opentest4j.AssertionFailedError at ItineraryTest.java:79
+
+ItineraryTest > getListOfLocations_fromMultiDestinationItinerary_orderOfLocationsMatchesOrderOfDestinations() FAILED
+    org.opentest4j.AssertionFailedError at ItineraryTest.java:95
+
+GetTopItemizedSpendsTest > getTopItemizedSpends_get_spendsAreSorted() FAILED
+    org.opentest4j.AssertionFailedError at GetTopItemizedSpendsTest.java:63
+
+GetTopTotalSpendsTest > getTopTotalSpends_get_spendsAreSortedByName() FAILED
+    org.opentest4j.AssertionFailedError at GetTopTotalSpendsTest.java:46
+
+CustomerTest > compareTo_withAnEqualCustomer_returnsZero() FAILED
+    org.opentest4j.AssertionFailedError at CustomerTest.java:33
+
+CustomerTest > compareTo_withSameCustomerNameEarlierJoinDate_returnsPositive() FAILED
+    org.opentest4j.AssertionFailedError at CustomerTest.java:73
+
+CustomerTest > compareTo_withEarlierCustomerName_returnsPositive() FAILED
+    org.opentest4j.AssertionFailedError at CustomerTest.java:53
+
+CustomerTest > equals_notEqualDate_returnsFalse() PASSED
+
+CustomerTest > compareTo_withLaterCustomerName_returnsNegative() FAILED
+    org.opentest4j.AssertionFailedError at CustomerTest.java:43
+
+CustomerTest > equals_equalAttributes_returnsTrue() PASSED
+
+CustomerTest > compareTo_withSameCustomerNameLaterJoinDate_returnsNegative() FAILED
+    org.opentest4j.AssertionFailedError at CustomerTest.java:63
+
+CustomerTest > equals_inputObjectDifferentType_returnsFalse() PASSED
+
+CustomerTest > equals_sameObject_returnsTrue() PASSED
+
+CustomerTest > equals_inputObjectNull_returnsFalse() PASSED
+
+CustomerTest > equals_notEqualName_returnsFalse() PASSED
+
+CustomerTotalSpendTest > equals_notEqualCustomer_returnsFalse() PASSED
+
+CustomerTotalSpendTest > getTotalSpend_withMultipleServiceSpends_returnsCorrectTotalSpend() PASSED
+
+CustomerTotalSpendTest > equals_equalAttributes_returnsTrue() PASSED
+
+CustomerTotalSpendTest > equals_notEqualSpend_returnsFalse() PASSED
+
+CustomerTotalSpendTest > equals_inputObjectDifferentType_returnsFalse() PASSED
+
+CustomerTotalSpendTest > equals_sameObject_returnsTrue() PASSED
+
+CustomerTotalSpendTest > equals_inputObjectNull_returnsFalse() PASSED
+
+100 tests completed, 77 failed
+
+> Task :test FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///Users/marwan/Documents/Work/SNHU/ATA_lessons/student_repos/ATA-Week-4/build/reports/tests/test/index.html
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 20s
+7 actionable tasks: 5 executed, 2 up-to-date
