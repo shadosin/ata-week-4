@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Comparable &#45; UserPageVisit Unit Tests",
+      "setup": "",
+      "run": "./gradlew comparable-userpagevisit-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 11,
+      "points": null
+    },
+    {
+      "name": "Group Activity &#45; Big Spender Unit Tests",
+      "setup": "",
+      "run": "./gradlew groupactivity-bigspender-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 11,
+      "points": null
+    },
+    {
+      "name": "Lists &#45; Itinerary List Unit Tests",
+      "setup": "",
+      "run": "./gradlew lists-itinerarylist-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 11,
+      "points": null
+    },
+    {
+      "name": "StringBuilder &#45; ATAStringBuilder Unit Tests",
+      "setup": "",
+      "run": "./gradlew stringbuilder-atastringbuilder-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 11,
+      "points": null
+    }
+  ]
+}
