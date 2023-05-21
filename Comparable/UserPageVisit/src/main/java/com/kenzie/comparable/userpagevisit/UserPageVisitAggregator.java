@@ -37,7 +37,7 @@ public class UserPageVisitAggregator {
             // The first visit always starts a new group
             UserPageVisitAggregate visitAggregate = new UserPageVisitAggregate(groupedUserPageVisits.get(0));
 
-            for (int i = 0; i < groupedUserPageVisits.size(); i++) {
+            for (int i = 1; i < groupedUserPageVisits.size(); i++) {
                 UserPageVisit visit = groupedUserPageVisits.get(i);
                 if (visitAggregate.canAggregate(visit)) {
                     visitAggregate.aggregate(visit);

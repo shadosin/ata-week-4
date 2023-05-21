@@ -19,6 +19,7 @@ public class Itinerary {
      */
     public void addDestination(Destination destination) {
         // Implement the method here
+        destinations.add(destination);
     }
 
     /**
@@ -29,7 +30,7 @@ public class Itinerary {
      */
     public Destination getDestination(int position) {
         // Implement the method here
-        return null;
+        return destinations.get(position);
     }
 
     /**
@@ -40,7 +41,7 @@ public class Itinerary {
      */
     public Destination removeDestination(int position) {
         // Implement the method here
-        return null;
+        return destinations.remove(position);
     }
 
 
@@ -52,7 +53,11 @@ public class Itinerary {
      */
     public List<String> getListOfLocations() {
         // Implement the method here
-        return new ArrayList<>();
+        List<String> locations = new ArrayList<>();
+        for(Destination destination: destinations){
+            locations.add(destination.getLocation());
+        }
+        return locations;
     }
 
     /**
@@ -63,7 +68,11 @@ public class Itinerary {
      */
     public int getTotalNumberOfDays() {
         // Implement the method here
-        return -1;
+        int totalDays = 0;
+        for(Destination destination: destinations){
+            totalDays += destination.getDaysAtLocation();
+        }
+        return totalDays;
     }
 
     /**
@@ -73,6 +82,6 @@ public class Itinerary {
      */
     public int getNumberOfDestinations() {
         // Implement the method here
-        return -1;
+        return destinations.size();
     }
 }

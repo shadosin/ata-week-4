@@ -30,10 +30,10 @@ public class CustomerServiceSpendTest {
         CustomerServiceSpend equalCustomerServiceSpend = new CustomerServiceSpend(equalNedflix, nedflixSagemakerSpend);
 
         // WHEN
-
+        int result = nedflixCustomerServiceSpend.compareTo(equalCustomerServiceSpend);
 
         // THEN
-        fail("Not implemented");
+        assertEquals(0, result);
     }
 
     @Test
@@ -43,10 +43,10 @@ public class CustomerServiceSpendTest {
         CustomerServiceSpend laterCustomerServiceSpend = new CustomerServiceSpend(laterCustomer, nedflixSagemakerSpend);
 
         // WHEN
-
+        int result = nedflixCustomerServiceSpend.compareTo(laterCustomerServiceSpend);
 
         // THEN
-        fail("Not implemented");
+        assertTrue(result < 0);
     }
 
     @Test
@@ -56,10 +56,10 @@ public class CustomerServiceSpendTest {
         CustomerServiceSpend earlierCustomerServiceSpend = new CustomerServiceSpend(earlierCustomer, nedflixSagemakerSpend);
 
         // WHEN
-
+        int result = nedflixCustomerServiceSpend.compareTo(earlierCustomerServiceSpend);
 
         // THEN
-        fail("Needs implemented");
+        assertTrue(result > 0);
     }
 
     @Test

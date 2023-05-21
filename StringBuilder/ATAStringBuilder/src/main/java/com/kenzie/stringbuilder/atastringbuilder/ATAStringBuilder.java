@@ -32,7 +32,9 @@ public class ATAStringBuilder {
      */
     public ATAStringBuilder(String initialString) {
         // PARTICIPANTS - initialize here
-        value = new ArrayList<>();
+        this();
+        append(initialString);
+
     }
 
     /**
@@ -45,7 +47,7 @@ public class ATAStringBuilder {
      */
     public int length() {
         // PARTICIPANTS - implement here
-        return -1;
+        return value.size();
     }
 
     /**
@@ -63,6 +65,16 @@ public class ATAStringBuilder {
      */
     public ATAStringBuilder append(String str) {
         // PARTICIPANTS - implement here
+        if(str == null){
+            value.add('n');
+            value.add('u');
+            value.add('l');
+            value.add('l');
+        } else {
+            for (char c : str.toCharArray()) {
+                value.add(c);
+            }
+        }
         return this;
     }
 
@@ -82,6 +94,10 @@ public class ATAStringBuilder {
      */
     public ATAStringBuilder insert(int offset, char c) {
         // PARTICIPANTS - implement here
+        if(offset < 0 || offset > value.size()){
+            throw new IndexOutOfBoundsException("Invalid offset " + offset);
+        }
+        value.add(offset, c);
         return this;
     }
 
@@ -102,7 +118,10 @@ public class ATAStringBuilder {
      */
     public char charAt(int index) {
         // PARTICIPANTS - implement here
-        return ' ';
+        if(index < 0 || index > value.size()){
+            throw new IndexOutOfBoundsException("Invalid Index: " + index);
+        }
+        return value.get(index);
     }
 
     /**
@@ -123,8 +142,13 @@ public class ATAStringBuilder {
      *                                   negative or greater than or equal to {@code length()}.
      */
     public ATAStringBuilder setCharAt(int index, char ch) {
-        // PARTICIPANTS - implement here
+        if(index < 0 || index > value.size()){
+            throw new IndexOutOfBoundsException("Invalid index " + index);
+        } else{
+        value.set(index, ch);
+        }
         return this;
+
     }
 
     /**
@@ -141,6 +165,11 @@ public class ATAStringBuilder {
      */
     public ATAStringBuilder deleteCharAt(int index) {
         // PARTICIPANTS - implement here
+        if(index < 0 || index > value.size()){
+            throw new IndexOutOfBoundsException("Invalid index " + index);
+        } else{
+            value.remove(index);
+        }
         return this;
     }
     
@@ -157,6 +186,10 @@ public class ATAStringBuilder {
     //CHECKSTYLE:OFF:OverloadMethodsDeclarationOrder
     public ATAStringBuilder append(Object obj) {
         // PARTICIPANTS - implement here
+        String str = String.valueOf(obj);
+        for(char c: str.toCharArray()){
+            value.add(c);
+        }
         return this;
     }
     //CHECKSTYLE:ON:OverloadMethodsDeclarationOrder
@@ -186,6 +219,15 @@ public class ATAStringBuilder {
     //CHECKSTYLE:OFF:OverloadMethodsDeclarationOrder
     public ATAStringBuilder insert(int offset, String str) {
         // PARTICIPANTS - implement here
+        if(offset < 0 || offset > value.size()){
+            throw new IndexOutOfBoundsException("Invalid offset: " + offset);
+        }else{
+            int index = offset;
+            for(char c: str.toCharArray()){
+                value.add(index,c);
+                index ++;
+            }
+        }
         return this;
     }
     //CHECKSTYLE:ON:OverloadMethodsDeclarationOrder
@@ -208,7 +250,14 @@ public class ATAStringBuilder {
      */
     public String substring(int start, int end) {
         // PARTICIPANTS - implement here
-        return null;
+        if(start < 0 || end > value.size() || start > end){
+            throw new IndexOutOfBoundsException("Invalid start or end index");
+        }
+        StringBuilder sb = new StringBuilder();
+        for(int i= start; i < end; i++){
+            sb.append(value.get(i));
+        }
+        return sb.toString();
     }
 
     @Override

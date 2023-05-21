@@ -1,11 +1,12 @@
 package com.kenzie.groupactivity.bigspender;
 
+import com.kenzie.groupactivity.bigspender.compare.CustomerTotalSpendbySpend;
 import com.kenzie.groupactivity.bigspender.dao.AwsServiceInvoiceDao;
-import com.kenzie.groupactivity.bigspender.types.CustomerServiceSpend;
-import com.kenzie.groupactivity.bigspender.types.CustomerTotalSpend;
+import com.kenzie.groupactivity.bigspender.types.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -18,6 +19,7 @@ public class AwsCustomerStatistics {
 
     /**
      * Creates a statistics instance with the provided DAO.
+     *
      * @param awsServiceInvoiceDao The AwsServiceInvoiceDao to use
      */
     public AwsCustomerStatistics(AwsServiceInvoiceDao awsServiceInvoiceDao) {
@@ -27,16 +29,17 @@ public class AwsCustomerStatistics {
     /**
      * Produces a list of the single service each AWS customer spent the most on,
      * sorted by customer name (ascending).
+     *
      * @return A list of CustomerServiceSpend representing the highest service
-     *         spend for each customer, sorted by customer name
+     * spend for each customer, sorted by customer name
      */
     public List<CustomerServiceSpend> getTopServiceSpendForEachCustomer() {
         // PARTICIPANTS: Which list needs to be sorted and returned?
         List<CustomerServiceSpend> topCustomerServiceSpends =
                 awsServiceInvoiceDao.getHighestServiceSpendsForEachCustomer();
-        Collections.sort(null);
+        Collections.sort(topCustomerServiceSpends);
 
-        return null;
+        return topCustomerServiceSpends;
     }
 
     /**
@@ -52,7 +55,19 @@ public class AwsCustomerStatistics {
         List<CustomerServiceSpend> report = new ArrayList<>();
         List<CustomerTotalSpend> totalSpends = awsServiceInvoiceDao.getAllServiceSpends();
 
-        return report;
+        Collections.sort(totalSpends, new CustomerTotalSpendbySpend().reversed());
 
+        for (CustomerTotalSpend currentSpend : totalSpends) {
+            Customer currCustomer = currentSpend.getCustomer();
+            List<ServiceSpend> serviceSpends = currentSpend.getServiceSpends();
+
+            // Sort serviceSpends for the current customer in ascending order of spend
+        Collections.sort(serviceSpends, new ServiceSpendByService().reversed());
+        for(ServiceSpend serviceSpend: serviceSpends){
+            report.add(new CustomerServiceSpend(currCustomer, serviceSpend));
+        }
+
+        }
+        return report;
     }
 }
